@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+		http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config />
+
+	<bean id="result1" class="com.SpringCore.StudentMarks_11.Result">
+		<constructor-arg value="67"></constructor-arg>
+		<constructor-arg value="78"></constructor-arg>
+		<constructor-arg value="82"></constructor-arg>
+		<constructor-arg value="91"></constructor-arg>
+	</bean>
+
+	<bean id="student1" class="com.SpringCore.StudentMarks_11.Student">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="akash"></constructor-arg>
+		<constructor-arg value="1996/09/30"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg>
+			<ref bean="result1" />
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="result2" class="com.SpringCore.StudentMarks_11.Result">
+		<constructor-arg value="76"></constructor-arg>
+		<constructor-arg value="88"></constructor-arg>
+		<constructor-arg value="82"></constructor-arg>
+		<constructor-arg value="96"></constructor-arg>
+	</bean>
+
+	<bean id="student2" class="com.SpringCore.StudentMarks_11.Student">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="rahul"></constructor-arg>
+		<constructor-arg value="1997/12/20"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg>
+			<ref bean="result2" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="result3" class="com.SpringCore.StudentMarks_11.Result">
+		<constructor-arg value="56"></constructor-arg>
+		<constructor-arg value="65"></constructor-arg>
+		<constructor-arg value="67"></constructor-arg>
+		<constructor-arg value="61"></constructor-arg>
+	</bean>
+
+	<bean id="student3" class="com.SpringCore.StudentMarks_11.Student">
+		<constructor-arg value="3"></constructor-arg>
+		<constructor-arg value="amod"></constructor-arg>
+		<constructor-arg value="1998/1/18"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+		<constructor-arg>
+			<ref bean="result3" />
+		</constructor-arg>
+	</bean>
+	
+		<bean id="result4" class="com.SpringCore.StudentMarks_11.Result">
+		<constructor-arg value="56"></constructor-arg>
+		<constructor-arg value="65"></constructor-arg>
+		<constructor-arg value="88"></constructor-arg>
+		<constructor-arg value="83"></constructor-arg>
+	</bean>
+
+	<bean id="student4" class="com.SpringCore.StudentMarks_11.Student">
+		<constructor-arg value="4"></constructor-arg>
+		<constructor-arg value="rohit"></constructor-arg>
+		<constructor-arg value="1997/03/28"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="C"></constructor-arg>
+		<constructor-arg>
+			<ref bean="result4" />
+		</constructor-arg>
+	</bean>
+
+</beans>

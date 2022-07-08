@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config />
+
+	<bean id="custbean" class="com.SpringCore.ItemCatCust_15.Customer">
+		<property name="cid" value="1"></property>
+		<property name="cname" value="akash"></property>
+		<property name="cphone" value="7058504649"></property>
+		<property name="caddress" value="Kolahpur"></property>
+		<property name="itemObj" ref="itembean"></property>
+	</bean>
+	<bean id="itembean" class="com.SpringCore.ItemCatCust_15.Item">
+		<property name="itemid" value="100"></property>
+		<property name="itemname" value="laptop"></property>
+		<property name="itemprice" value="30000"></property>
+		<property name="catobj" ref="catbean"></property>
+
+	</bean>
+	<bean id="catbean" class="com.SpringCore.ItemCatCust_15.Category">
+		<property name="catid" value="1000"></property>
+		<property name="Catname" value="electronics"></property>
+	</bean>
+
+</beans>

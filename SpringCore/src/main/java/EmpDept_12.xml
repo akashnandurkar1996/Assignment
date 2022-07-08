@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+
+
+	<bean id="empbean1" class="com.SpringCore.EmpDept_12.Employee">
+		<property name="eid" value="1"></property>
+		<property name="ename" value="akash"></property>
+		<property name="esalary" value="27000"></property>
+		<property name="dept" ref="deptbean1"></property> 
+	</bean>
+	<bean id="deptbean1" class="com.SpringCore.EmpDept_12.Department">
+		<property name="deptname" value="sales"></property>
+	</bean>
+
+
+
+	<bean id="empbean2" class="com.SpringCore.EmpDept_12.Employee">
+		<property name="eid" value="2"></property>
+		<property name="ename" value="rahul"></property>
+		<property name="esalary" value="22000"></property>
+		<property name="dept" ref="deptbean2"></property>
+	</bean>
+	<bean id="deptbean2" class="com.SpringCore.EmpDept_12.Department">
+		<property name="deptname" value="development"></property>
+	</bean>
+
+
+	<bean id="empbean3" class="com.SpringCore.EmpDept_12.Employee">
+		<property name="eid" value="3"></property>
+		<property name="ename" value="rohit"></property>
+		<property name="esalary" value="30000"></property>
+		<property name="dept" ref="deptbean3"></property>
+	</bean>
+	<bean id="deptbean3" class="com.SpringCore.EmpDept_12.Department">
+		<property name="deptname" value="development"></property>
+	</bean>
+
+
+	<bean id="empbean4" class="com.SpringCore.EmpDept_12.Employee">
+		<property name="eid" value="4"></property>
+		<property name="ename" value="anuj"></property>
+		<property name="esalary" value="20000"></property>
+		<property name="dept" ref="deptbean4"></property>
+	</bean>
+
+	<bean id="deptbean4" class="com.SpringCore.EmpDept_12.Department">
+		<property name="deptname" value="sales"></property>
+	</bean>
+
+</beans>
